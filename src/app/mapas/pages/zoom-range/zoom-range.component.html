@@ -5,7 +5,7 @@ lo ideal es poder trabajar con referencias locales -->
     <div class="col-12">
 
         <label for="" class="label-form">
-            Zoom: {{zoomLevel | number:'2.2-2'}} - lon-lat: [123, 456 ]
+            Zoom: {{zoomLevel | number:'2.2-2'}} - lon-lat: [{{center[0] | number: '2.4-4' }}, {{center[1] | number: '2.4' }} ]
         </label>
         
         <input type="range"
