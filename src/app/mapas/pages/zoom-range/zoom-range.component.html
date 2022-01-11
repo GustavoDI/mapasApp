@@ -1,1 +1,18 @@
-<p>zoom-range works!</p>
+<!-- Si quermos trabajar conm varios mapas en este componente los ids toparian y no se podrias trabajar
+lo ideal es poder trabajar con referencias locales -->
+<div #mapa class="mapa-container" >
+<div class="row">
+    <div class="col-12">
+
+        <label for="" class="label-form">
+            Zoom: {{zoomLevel | number:'2.2-2'}} - lon-lat: [123, 456 ]
+        </label>
+        
+        <input type="range" class="form-range" >
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" (click)="zoomOut()">-</button>
+        <button class="btn btn-primary float-end" (click)="zoomIn()">+</button>
+    </div>
+</div>
+</div>
