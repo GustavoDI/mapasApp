@@ -8,8 +8,15 @@ lo ideal es poder trabajar con referencias locales -->
             Zoom: {{zoomLevel | number:'2.2-2'}} - lon-lat: [123, 456 ]
         </label>
         
-        <input type="range" class="form-range" >
+        <input type="range"
+               class="form-range" 
+               [value]="zoomLevel"
+               min="0"
+               max="18"
+               (input)="zoomCambio(valor.value)"
+               #valor>
     </div>
+    <!-- el valor y el input se llaman referencias locales-->
     <div class="col-12">
         <button class="btn btn-primary" (click)="zoomOut()">-</button>
         <button class="btn btn-primary float-end" (click)="zoomIn()">+</button>
